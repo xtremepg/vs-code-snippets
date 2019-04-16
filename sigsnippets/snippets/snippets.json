@@ -1,0 +1,36 @@
+{
+    "Array Method": {
+        "prefix": "arrmth",
+        "body": [
+          "${1|forEach,map,some,every,reduce,filter|}((${2:item}) => {",
+          "  $3",
+          "})"
+        ],
+        "description": "Array Method"
+    },
+    "Sig Component": {
+		"prefix": "sig-component",
+		"body":[
+			"import { Component, OnInit } from '@angular/core';",
+
+			"@Component({",
+			  "selector: 'sig-${1:selectorName}',",
+			  "templateUrl: './${2:templateName}',",
+			  "styleUrls: ['./${3:styleName}']",
+			"})",
+			"export class ${4:componentName}Component implements OnInit {",
+			
+			  "constructor() { }",
+			
+			  "ngOnInit() {}",
+			
+			"}",
+			],
+		"description": "Component base do projeto SIG"
+	},
+	"Console Log": {
+		"prefix": "cl",
+		"body": "console.log(${1:textoParaExibicao});",
+		"description": "Console Log Customizado"
+	}
+}
